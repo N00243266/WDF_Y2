@@ -1,0 +1,19 @@
+.btn-main {
+  background: $purple-dark;
+  border: none;
+  color: white;
+  padding: 0.75rem 2rem; //top bottom left right
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.btn-second-main {
+  border: 2px solid $purple-dark;
+  color: $purple-dark;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+
