@@ -16,3 +16,51 @@
   filter: blur(60px);
   opacity: 0.9;
 }
+
+
+// container
+.pulse-heart-wrapper {
+  position: relative;
+  display: inline-block;
+  animation: heart-scale 2.2s infinite ease-in-out;
+  margin-top: 3.5rem;
+}
+
+// heart glow
+.pulse-heart-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: #a685fb; // soft purple
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: .5;
+  z-index: -1;
+  animation: glow-pulse 2.2s infinite ease-in-out;
+}
+
+// heart svg animation
+.pulse-heart {
+  transform-origin: center;
+  animation: heart-pulse 2.2s infinite ease-in-out;
+}
+
+
+// Keyframes
+@keyframes heart-pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes glow-pulse {
+  0%,100% { opacity: .4; filter: blur(40px); }
+  50% { opacity: .7; filter: blur(70px); }
+}
+
+@keyframes heart-scale {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+
+
